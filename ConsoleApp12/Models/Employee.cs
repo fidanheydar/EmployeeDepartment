@@ -1,39 +1,22 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ConsoleApp11.Models
+namespace ConsoleApp12.Models
 {
     internal class Employee
     {
-        public string Name;
-        public string Surname;
-        private int _salary;
+        public string Name { get; set; }
+        public string Surname { get; set; }
+        public int Salary { get; set; }
 
-        public int Salary
+        public Employee(string name, string surname, int salary)
         {
-            get
-            {
-                return _salary;
-            }
-            set
-            {
-                if (value >= 250)
-                {
-                    _salary = value;
-                }
-            }
+            Name = name;
+            Surname = surname;
+            Salary = salary;
         }
-
-        public Employee(string Name, string Surname, int Salary)
-        {
-            this.Name = Name;
-            this.Surname = Surname;
-            this.Salary = Salary;
-        }
-
     }
 }
